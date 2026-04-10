@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Darriel Black Cyber Cafe – Call, WhatsApp, email or fill out our contact form. South Africa." />
+  <title>Contact Us | Darriel Black Cyber Cafe</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    .map-container {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-top: 24px;
+      background: var(--card-bg);
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+    .map-container:hover { border-color: var(--accent); }
+    .map-container i { font-size: 2rem; color: var(--accent); }
+    .map-container span { font-size: 0.85rem; color: var(--text-muted); }
+
+    .quick-contact-bar {
+      background: var(--accent);
+      padding: 18px 0;
+    }
+    .quick-contact-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .qc-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .qc-item i { font-size: 1rem; }
+    .qc-item:hover { opacity: 0.85; }
+
+    .faq-section { margin-top: 70px; }
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      color: var(--white);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+    .faq-q:hover { color: var(--accent); }
+    .faq-q i { transition: transform var(--transition); color: var(--accent); }
+    .faq-q.open i { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    .faq-a.open { max-height: 200px; }
+    .faq-a p {
+      padding: 0 22px 18px;
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">DB</div>
+      <div class="logo-text"><span>Darriel Black</span><span>Cyber Cafe</span></div>
+    </a>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+      <li class="nav-item">
+        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down" style="font-size:0.6rem"></i></a>
+        <div class="dropdown">
+          <a href="services.html#printing"><i class="fas fa-print"></i> Printing Services</a>
+          <a href="services.html#web"><i class="fas fa-globe"></i> Web Designing</a>
+          <a href="services.html#graphic"><i class="fas fa-palette"></i> Graphic Design</a>
+          <a href="services.html#digital"><i class="fas fa-bullhorn"></i> Digital Marketing</a>
+          <a href="services.html#cafe"><i class="fas fa-desktop"></i> Internet Café</a>
+          <a href="services.html#it"><i class="fas fa-tools"></i> IT Solutions</a>
+          <a href="services.html#photo"><i class="fas fa-camera"></i> Photography</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="store.html" class="nav-link">Online Store</a></li>
+      <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+      <li class="nav-item"><a href="quote.html" class="nav-link nav-cta">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Contact Us</span>
+    </div>
+    <h1>Get In <span class="text-accent">Touch</span></h1>
+    <p>We'd love to hear from you. Reach out via any channel below and we'll respond promptly.</p>
+  </div>
+</section>
+
+<!-- QUICK CONTACT BAR -->
+<div class="quick-contact-bar">
+  <div class="container">
+    <div class="quick-contact-inner">
+      <a href="tel:+27611565699" class="qc-item"><i class="fas fa-phone"></i> +27 61 156 5699</a>
+      <a href="mailto:darrielblackcybercafe@gmail.com" class="qc-item"><i class="fas fa-envelope"></i> darrielblackcybercafe@gmail.com</a>
+      <a href="https://wa.me/27611565699" class="qc-item" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT MAIN -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Info side -->
+      <div>
+        <div class="contact-info-card reveal">
+          <h3>Contact <span class="text-accent">Information</span></h3>
+
+          <div class="contact-info-item">
+            <div class="icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <div class="label">Phone</div>
+              <a href="tel:+27611565699" class="value">+27 61 156 5699</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="label">Email</div>
+              <a href="mailto:darrielblackcybercafe@gmail.com" class="value" style="word-break:break-all;">darrielblackcybercafe@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="label">Location</div>
+              <div class="value">South Africa</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <div class="label">Business Hours</div>
+              <div class="value">Mon–Fri: 8AM – 6PM<br>Sat: 9AM – 4PM</div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/27611565699" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="width:100%; justify-content:center; margin-top:8px;">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+
+        <!-- Map placeholder -->
+        <a href="https://maps.google.com/?q=South+Africa" class="map-container" target="_blank" rel="noopener noreferrer" aria-label="Open in Google Maps">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Click to open in Google Maps</span>
+          <span style="font-size:0.75rem; color:var(--border)">South Africa</span>
+        </a>
+      </div>
+
+      <!-- Contact form -->
+      <div class="contact-form-card reveal">
+        <h3>Send Us a <span class="text-accent">Message</span></h3>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Full Name <span style="color:var(--accent)">*</span></label>
+              <input type="text" id="contactName" name="name" class="form-control" placeholder="Your name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address <span style="color:var(--accent)">*</span></label>
+              <input type="email" id="contactEmail" name="email" class="form-control" placeholder="your@email.com" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactPhone">Phone Number</label>
+            <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="+27 00 000 0000" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject <span style="color:var(--accent)">*</span></label>
+            <input type="text" id="contactSubject" name="subject" class="form-control" placeholder="What is your enquiry about?" required />
+          </div>
+          <div class="form-group">
+            <label for="contactMsg">Message <span style="color:var(--accent)">*</span></label>
+            <textarea id="contactMsg" name="message" class="form-control" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding: 15px;">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section reveal">
+      <div class="section-header">
+        <h2>Frequently Asked <span class="text-accent">Questions</span></h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How do I place an order?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">
+          <p>You can contact us via WhatsApp, email, or phone to discuss your order. Alternatively, fill out our quote request form and we will get back to you within 24 hours.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How long does it take to deliver?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">
+          <p>Turnaround time depends on the service and order size. Printing orders typically take 1–3 business days. Websites take 1–4 weeks depending on the package. We'll confirm timelines when you place your order.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Do you offer payment plans?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">
+          <p>Yes, for larger projects like web design packages we can arrange payment plans. Please contact us to discuss your budget and we'll find a solution that works for you.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Can I provide my own design files?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">
+          <p>Absolutely! You can supply your own artwork in PDF, AI, EPS, PNG (300+ DPI) formats. If you need us to design from scratch, we offer that too — just include it in your quote request.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Do you serve clients outside your immediate area?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">
+          <p>Yes! Digital services (web design, graphic design, digital marketing) are available nationwide. For physical products, we can discuss delivery options with you directly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">DB</div>
+          <div class="logo-text"><span>Darriel Black</span><span>Cyber Cafe</span></div>
+        </a>
+        <p>Your one-stop digital and printing solution in South Africa.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/27611565699" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> About Us</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Services</a></li>
+          <li><a href="store.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Online Store</a></li>
+          <li><a href="portfolio.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Portfolio</a></li>
+          <li><a href="quote.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="services.html#printing"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Printing</a></li>
+          <li><a href="services.html#web"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Web Design</a></li>
+          <li><a href="services.html#graphic"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Graphic Design</a></li>
+          <li><a href="services.html#digital"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Digital Marketing</a></li>
+          <li><a href="services.html#cafe"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Internet Café</a></li>
+          <li><a href="services.html#it"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> IT Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+27 61 156 5699</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>darrielblackcybercafe@gmail.com</span></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>South Africa</span></div>
+        <a href="https://wa.me/27611565699" class="btn btn-outline btn-sm mt-16" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span class="current-year"></span> <a href="index.html">Darriel Black Cyber Cafe</a>. All rights reserved.</p>
+      <p>Designed with <i class="fas fa-heart" style="color:var(--accent)"></i> in South Africa</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/27611565699" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="js/main.js"></script>
+<script>
+  function toggleFaq(el) {
+    const ans = el.nextElementSibling;
+    const isOpen = ans.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    if (!isOpen) {
+      ans.classList.add('open');
+      el.classList.add('open');
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Darriel Black Cyber Cafe – Your One-Stop Digital & Printing Solution in South Africa. Printing, Web Design, Graphic Design, IT Solutions & more." />
+  <title>Darriel Black Cyber Cafe | Home</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* ---- Home page specific ---- */
+    .services-card-icon { font-size: 2rem; }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      padding: 70px 0;
+      text-align: center;
+    }
+    .cta-banner h2 { color: var(--primary); margin-bottom: 14px; }
+    .cta-banner p { color: rgba(10,10,10,0.75); max-width: 500px; margin: 0 auto 32px; font-size: 1.05rem; }
+    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .cta-banner .btn-dark {
+      background: var(--primary);
+      color: var(--accent);
+      border: 2px solid var(--primary);
+    }
+    .cta-banner .btn-dark:hover { background: transparent; color: var(--primary); border-color: var(--primary); }
+    .cta-banner .btn-ghost {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+    }
+    .cta-banner .btn-ghost:hover { background: var(--primary); color: var(--accent); }
+
+    /* Trusted partners */
+    .trusted-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+      overflow: hidden;
+    }
+    .trusted-bar p {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .trusted-logos {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .trusted-logos span {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      opacity: 0.6;
+      transition: opacity var(--transition);
+    }
+    .trusted-logos span:hover { opacity: 1; color: var(--accent); }
+
+    /* Process steps */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 30px; left: 12.5%; right: 12.5%;
+      height: 2px;
+      background: linear-gradient(to right, var(--accent), var(--accent-dark));
+      z-index: 0;
+    }
+    .step-item {
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .step-num {
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--primary);
+      font-size: 1.3rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      border: 4px solid var(--primary);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+    .step-item h4 { color: var(--white); margin-bottom: 8px; }
+    .step-item p { font-size: 0.82rem; }
+
+    @media (max-width: 768px) {
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 30px; }
+      .process-steps::before { display: none; }
+    }
+    @media (max-width: 480px) {
+      .process-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ======== NAVBAR ======== -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="Darriel Black Cyber Cafe Home">
+      <div class="logo-icon">DB</div>
+      <div class="logo-text">
+        <span>Darriel Black</span>
+        <span>Cyber Cafe</span>
+      </div>
+    </a>
+
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-menu" role="list">
+      <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+      <li class="nav-item">
+        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down" style="font-size:0.6rem"></i></a>
+        <div class="dropdown">
+          <a href="services.html#printing"><i class="fas fa-print"></i> Printing Services</a>
+          <a href="services.html#web"><i class="fas fa-globe"></i> Web Designing</a>
+          <a href="services.html#graphic"><i class="fas fa-palette"></i> Graphic Design</a>
+          <a href="services.html#digital"><i class="fas fa-bullhorn"></i> Digital Marketing</a>
+          <a href="services.html#cafe"><i class="fas fa-desktop"></i> Internet Café</a>
+          <a href="services.html#it"><i class="fas fa-tools"></i> IT Solutions</a>
+          <a href="services.html#photo"><i class="fas fa-camera"></i> Photography</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="store.html" class="nav-link">Online Store</a></li>
+      <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      <li class="nav-item"><a href="quote.html" class="nav-link nav-cta">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ======== HERO ======== -->
+<section class="hero" aria-label="Hero section">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text reveal">
+        <span class="badge">
+          <i class="fas fa-star"></i>
+          South Africa's Trusted Digital Hub
+        </span>
+        <h1>Your One-Stop <span>Digital &amp; Printing</span> Solution</h1>
+        <p>From stunning prints and custom branding to professional websites and IT support — Darriel Black Cyber Cafe delivers excellence every time.</p>
+        <div class="hero-actions">
+          <a href="quote.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-file-alt"></i> Get a Free Quote
+          </a>
+          <a href="store.html" class="btn btn-outline btn-lg">
+            <i class="fas fa-shopping-bag"></i> Shop Now
+          </a>
+          <a href="contact.html" class="btn btn-white btn-lg">
+            <i class="fas fa-phone"></i> Contact Us
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="num" data-target="500" data-suffix="+">0+</span>
+            <span class="label">Clients Served</span>
+          </div>
+          <div class="hero-stat">
+            <span class="num" data-target="7" data-suffix="+">0+</span>
+            <span class="label">Service Areas</span>
+          </div>
+          <div class="hero-stat">
+            <span class="num" data-target="100" data-suffix="%">0%</span>
+            <span class="label">Satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-card-stack">
+          <div class="hero-card-item">
+            <i class="fas fa-print"></i>
+            <h4>Printing Services</h4>
+            <p>Sublimation, Vinyl, Embroidery & more</p>
+          </div>
+          <div class="hero-card-item">
+            <i class="fas fa-globe"></i>
+            <h4>Web Design</h4>
+            <p>From R4,500 – Beautiful, fast websites</p>
+          </div>
+          <div class="hero-card-item">
+            <i class="fas fa-camera"></i>
+            <h4>Photography</h4>
+            <p>Weddings, Events & Corporate shoots</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== TRUSTED ======== -->
+<div class="trusted-bar">
+  <div class="container">
+    <p>Trusted For</p>
+    <div class="trusted-logos">
+      <span>Printing</span>
+      <span>Web Design</span>
+      <span>Graphic Design</span>
+      <span>Digital Marketing</span>
+      <span>IT Solutions</span>
+      <span>Photography</span>
+    </div>
+  </div>
+</div>
+
+<!-- ======== SERVICES OVERVIEW ======== -->
+<section class="section" id="services-overview" aria-label="Services overview">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>What We <span class="text-accent">Offer</span></h2>
+      <div class="divider"></div>
+      <p>A complete range of professional services designed to grow your business and bring your ideas to life.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-print services-card-icon"></i></div>
+        <h3>Printing Services</h3>
+        <p>Sublimation, Vinyl Cutouts, Car Branding, Banners, Embroidery, Laser & DTF Printing.</p>
+        <a href="services.html#printing" class="btn btn-outline btn-sm mt-16">Learn More</a>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-code services-card-icon"></i></div>
+        <h3>Web Designing</h3>
+        <p>From basic 3-page sites to full e-commerce platforms. Packages starting at R4,500.</p>
+        <a href="services.html#web" class="btn btn-outline btn-sm mt-16">View Packages</a>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-paint-brush services-card-icon"></i></div>
+        <h3>Graphic Design</h3>
+        <p>Logos, flyers, posters, business cards, branding kits, t-shirt designs and more.</p>
+        <a href="services.html#graphic" class="btn btn-outline btn-sm mt-16">Learn More</a>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-bullhorn services-card-icon"></i></div>
+        <h3>Digital Marketing</h3>
+        <p>Social media management, content creation, ads management & branding strategy.</p>
+        <a href="services.html#digital" class="btn btn-outline btn-sm mt-16">Learn More</a>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-desktop services-card-icon"></i></div>
+        <h3>Internet Café</h3>
+        <p>CV typing, assignments, online applications, UIF claims, SARS, company registration & more.</p>
+        <a href="services.html#cafe" class="btn btn-outline btn-sm mt-16">Learn More</a>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-laptop-code services-card-icon"></i></div>
+        <h3>IT Solutions</h3>
+        <p>Laptop repairs, phone software resets, and system troubleshooting.</p>
+        <a href="services.html#it" class="btn btn-outline btn-sm mt-16">Learn More</a>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><i class="fas fa-camera services-card-icon"></i></div>
+        <h3>Photography</h3>
+        <p>Weddings, school photography, corporate events, short videos & content creation.</p>
+        <a href="services.html#photo" class="btn btn-outline btn-sm mt-16">Learn More</a>
+      </div>
+    </div>
+
+    <div class="text-center mt-32 reveal">
+      <a href="services.html" class="btn btn-primary">View All Services <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======== HOW IT WORKS ======== -->
+<section class="section section-alt" aria-label="How it works">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>How It <span class="text-accent">Works</span></h2>
+      <div class="divider"></div>
+      <p>Getting started with Darriel Black Cyber Cafe is simple and straightforward.</p>
+    </div>
+
+    <div class="process-steps reveal">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <h4>Choose a Service</h4>
+        <p>Browse our wide range of services and find what suits your needs.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <h4>Request a Quote</h4>
+        <p>Fill out our quick quote form with your project details.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <h4>We Get to Work</h4>
+        <p>Our team crafts your solution with precision and care.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <h4>Delivery</h4>
+        <p>Receive your finished product on time and to your satisfaction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CTA BANNER ======== -->
+<div class="cta-banner" aria-label="Call to action">
+  <div class="container">
+    <h2>Ready to Elevate Your Brand?</h2>
+    <p>Contact us today and let's turn your vision into reality — fast, professional, and affordable.</p>
+    <div class="cta-actions">
+      <a href="quote.html" class="btn btn-dark btn-lg"><i class="fas fa-file-alt"></i> Get a Free Quote</a>
+      <a href="store.html" class="btn btn-ghost btn-lg"><i class="fas fa-shopping-bag"></i> Shop Online</a>
+    </div>
+  </div>
+</div>
+
+<!-- ======== TESTIMONIALS ======== -->
+<section class="section" aria-label="Testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>What Our <span class="text-accent">Clients Say</span></h2>
+      <div class="divider"></div>
+      <p>Real feedback from real clients across South Africa.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="quote">"</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>Darriel Black designed my business website from scratch. The result was stunning — modern, fast, and exactly what I envisioned. Highly recommended!</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">T</div>
+          <div class="author-info">
+            <div class="name">Thabo M.</div>
+            <div class="role">Small Business Owner</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="quote">"</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>The printing quality is outstanding! Got my car branding and banners done here — the team was professional and delivered on time. Will definitely be back.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">N</div>
+          <div class="author-info">
+            <div class="name">Nandi K.</div>
+            <div class="role">Event Coordinator</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="quote">"</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+        <p>They helped me set up my UIF claim and even assisted with my CV. The staff is friendly and very knowledgeable. Best cyber cafe in the area!</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">L</div>
+          <div class="author-info">
+            <div class="name">Lerato P.</div>
+            <div class="role">Graduate Job Seeker</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FOOTER ======== -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">DB</div>
+          <div class="logo-text">
+            <span>Darriel Black</span>
+            <span>Cyber Cafe</span>
+          </div>
+        </a>
+        <p>Your one-stop digital and printing solution in South Africa. Professional, reliable, and always creative.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/27611565699" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> About Us</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Services</a></li>
+          <li><a href="store.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Online Store</a></li>
+          <li><a href="portfolio.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Portfolio</a></li>
+          <li><a href="quote.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Get a Quote</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="services.html#printing"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Printing</a></li>
+          <li><a href="services.html#web"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Web Design</a></li>
+          <li><a href="services.html#graphic"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Graphic Design</a></li>
+          <li><a href="services.html#digital"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Digital Marketing</a></li>
+          <li><a href="services.html#cafe"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Internet Café</a></li>
+          <li><a href="services.html#it"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> IT Solutions</a></li>
+          <li><a href="services.html#photo"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Photography</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+27 61 156 5699</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>darrielblackcybercafe@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>South Africa</span>
+        </div>
+        <a href="https://wa.me/27611565699" class="btn btn-outline btn-sm mt-16" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span class="current-year"></span> <a href="index.html">Darriel Black Cyber Cafe</a>. All rights reserved.</p>
+      <p>Designed with <i class="fas fa-heart" style="color:var(--accent)"></i> in South Africa</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/27611565699" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

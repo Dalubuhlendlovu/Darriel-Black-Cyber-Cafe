@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Request a Quote from Darriel Black Cyber Cafe – Printing, Web Design, Graphic Design, Photography and more." />
+  <title>Request a Quote | Darriel Black Cyber Cafe</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    .quote-layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .quote-sidebar {
+      position: sticky;
+      top: calc(var(--nav-height) + 20px);
+    }
+
+    .quote-info-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 24px;
+    }
+
+    .quote-info-card h3 { color: var(--white); margin-bottom: 20px; }
+
+    .service-shortcuts {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .service-shortcut {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: rgba(212,175,55,0.05);
+      border: 1px solid rgba(212,175,55,0.15);
+      border-radius: var(--radius);
+      font-size: 0.85rem;
+      color: var(--text-light);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .service-shortcut:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .service-shortcut i { color: var(--accent); width: 18px; }
+
+    .quote-form-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+    }
+
+    .quote-form-card h3 {
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .quote-form-card .subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+    }
+
+    .step-indicator {
+      display: flex;
+      gap: 0;
+      margin-bottom: 40px;
+    }
+    .step-ind {
+      flex: 1;
+      text-align: center;
+      position: relative;
+    }
+    .step-ind::after {
+      content: '';
+      position: absolute;
+      top: 18px; left: 50%; right: -50%;
+      height: 2px;
+      background: var(--border);
+      z-index: 0;
+    }
+    .step-ind:last-child::after { display: none; }
+    .step-ind .s-dot {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--secondary);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 1;
+      transition: all var(--transition);
+    }
+    .step-ind.active .s-dot {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--primary);
+    }
+    .step-ind.done .s-dot {
+      background: rgba(212,175,55,0.2);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .step-ind .s-label { font-size: 0.72rem; color: var(--text-muted); }
+    .step-ind.active .s-label { color: var(--accent); }
+
+    .success-state {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .success-state i { font-size: 4rem; color: var(--accent); margin-bottom: 20px; display: block; }
+    .success-state h3 { color: var(--white); margin-bottom: 10px; }
+    .success-state p { margin-bottom: 28px; }
+
+    @media (max-width: 900px) {
+      .quote-layout { grid-template-columns: 1fr; }
+      .quote-sidebar { position: static; }
+      .quote-form-card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">DB</div>
+      <div class="logo-text"><span>Darriel Black</span><span>Cyber Cafe</span></div>
+    </a>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+      <li class="nav-item">
+        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down" style="font-size:0.6rem"></i></a>
+        <div class="dropdown">
+          <a href="services.html#printing"><i class="fas fa-print"></i> Printing Services</a>
+          <a href="services.html#web"><i class="fas fa-globe"></i> Web Designing</a>
+          <a href="services.html#graphic"><i class="fas fa-palette"></i> Graphic Design</a>
+          <a href="services.html#digital"><i class="fas fa-bullhorn"></i> Digital Marketing</a>
+          <a href="services.html#cafe"><i class="fas fa-desktop"></i> Internet Café</a>
+          <a href="services.html#it"><i class="fas fa-tools"></i> IT Solutions</a>
+          <a href="services.html#photo"><i class="fas fa-camera"></i> Photography</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="store.html" class="nav-link">Online Store</a></li>
+      <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      <li class="nav-item"><a href="quote.html" class="nav-link nav-cta active">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Request a Quote</span>
+    </div>
+    <h1>Request a <span class="text-accent">Quote</span></h1>
+    <p>Fill out the form below and we'll get back to you with a tailored quote within 24 hours.</p>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section class="section">
+  <div class="container">
+    <div class="quote-layout">
+
+      <!-- Sidebar -->
+      <div class="quote-sidebar">
+        <div class="quote-info-card reveal">
+          <h3>Quick <span class="text-accent">Select</span></h3>
+          <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:18px;">Click a service to pre-fill the form</p>
+          <div class="service-shortcuts">
+            <button class="service-shortcut" onclick="selectService('Printing Services (Sublimation, Vinyl, Banners, etc.)')">
+              <i class="fas fa-print"></i> Printing Services
+            </button>
+            <button class="service-shortcut" onclick="selectService('Web Design – Basic Package (R4,500)')">
+              <i class="fas fa-globe"></i> Web Design – Basic
+            </button>
+            <button class="service-shortcut" onclick="selectService('Web Design – Professional Package (R10,000)')">
+              <i class="fas fa-globe"></i> Web Design – Pro
+            </button>
+            <button class="service-shortcut" onclick="selectService('Web Design – E-commerce Package (R18,000)')">
+              <i class="fas fa-shopping-cart"></i> Web Design – E-com
+            </button>
+            <button class="service-shortcut" onclick="selectService('Graphic Design (Logos, Flyers, Branding, etc.)')">
+              <i class="fas fa-palette"></i> Graphic Design
+            </button>
+            <button class="service-shortcut" onclick="selectService('Digital Marketing (Social Media, Ads, Branding)')">
+              <i class="fas fa-bullhorn"></i> Digital Marketing
+            </button>
+            <button class="service-shortcut" onclick="selectService('Photography (Wedding, Event, Corporate, School)')">
+              <i class="fas fa-camera"></i> Photography
+            </button>
+            <button class="service-shortcut" onclick="selectService('IT Solutions (Laptop Repair, Phone Reset, Troubleshooting)')">
+              <i class="fas fa-tools"></i> IT Solutions
+            </button>
+            <button class="service-shortcut" onclick="selectService('Internet Café Services (CV, Documents, Online Applications)')">
+              <i class="fas fa-desktop"></i> Internet Café
+            </button>
+            <button class="service-shortcut" onclick="selectService('Custom Printed Products (T-Shirts, Mugs, Stickers, etc.)')">
+              <i class="fas fa-magic"></i> Custom Products
+            </button>
+          </div>
+        </div>
+
+        <div class="quote-info-card reveal">
+          <h3>Need Help?</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">Prefer to speak directly? Reach us here:</p>
+          <a href="https://wa.me/27611565699" class="btn btn-primary" style="width:100%; justify-content:center;" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          </a>
+          <a href="tel:+27611565699" class="btn btn-outline mt-16" style="width:100%; justify-content:center;">
+            <i class="fas fa-phone"></i> Call Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="quote-form-card reveal">
+        <h3>Quote <span class="text-accent">Request Form</span></h3>
+        <p class="subtitle">All fields marked <span style="color:var(--accent)">*</span> are required. We respond within 24 hours.</p>
+
+        <!-- Step indicator (visual only) -->
+        <div class="step-indicator">
+          <div class="step-ind active">
+            <div class="s-dot">1</div>
+            <div class="s-label">Your Info</div>
+          </div>
+          <div class="step-ind">
+            <div class="s-dot">2</div>
+            <div class="s-label">Service</div>
+          </div>
+          <div class="step-ind">
+            <div class="s-dot">3</div>
+            <div class="s-label">Details</div>
+          </div>
+        </div>
+
+        <form id="quoteForm" novalidate>
+
+          <!-- Personal Info -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quoteName">Full Name <span style="color:var(--accent)">*</span></label>
+              <input type="text" id="quoteName" name="name" class="form-control" placeholder="Your full name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="quoteEmail">Email Address <span style="color:var(--accent)">*</span></label>
+              <input type="email" id="quoteEmail" name="email" class="form-control" placeholder="your@email.com" required autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quotePhone">Phone Number <span style="color:var(--accent)">*</span></label>
+              <input type="tel" id="quotePhone" name="phone" class="form-control" placeholder="+27 00 000 0000" required autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="quoteCompany">Company / Business Name</label>
+              <input type="text" id="quoteCompany" name="company" class="form-control" placeholder="Optional" autocomplete="organization" />
+            </div>
+          </div>
+
+          <!-- Service Selection -->
+          <div class="form-group">
+            <label for="quoteService">Service Required <span style="color:var(--accent)">*</span></label>
+            <select id="quoteService" name="service" class="form-control" required>
+              <option value="" disabled selected>— Select a service —</option>
+              <optgroup label="Printing Services">
+                <option value="Sublimation Printing">Sublimation Printing</option>
+                <option value="Vinyl Cutout / Car Branding">Vinyl Cutout / Car Branding</option>
+                <option value="Banners / Welcome Boards">Banners / Welcome Boards</option>
+                <option value="Embroidery">Embroidery</option>
+                <option value="Laser Printing">Laser Printing</option>
+                <option value="DTF Printing">DTF Printing</option>
+              </optgroup>
+              <optgroup label="Web Designing">
+                <option value="Web Design – Basic Package (R4,500)">Web Design – Basic (R4,500)</option>
+                <option value="Web Design – Professional Package (R10,000)">Web Design – Professional (R10,000)</option>
+                <option value="Web Design – E-commerce Package (R18,000)">Web Design – E-commerce (R18,000)</option>
+              </optgroup>
+              <optgroup label="Graphic Design">
+                <option value="Logo Design">Logo Design</option>
+                <option value="Flyer Design">Flyer Design</option>
+                <option value="Poster Design">Poster Design</option>
+                <option value="Business Card Design">Business Card Design</option>
+                <option value="Branding Kit">Branding Kit</option>
+                <option value="T-shirt Design">T-shirt Design</option>
+                <option value="Other Graphic Design">Other Graphic Design</option>
+              </optgroup>
+              <optgroup label="Digital Marketing">
+                <option value="Social Media Management">Social Media Management</option>
+                <option value="Content Creation">Content Creation</option>
+                <option value="Ads Management">Ads Management</option>
+                <option value="Branding Strategy">Branding Strategy</option>
+              </optgroup>
+              <optgroup label="Internet Café Services">
+                <option value="CV / Resume Typing">CV / Resume Typing</option>
+                <option value="Assignment Typing">Assignment Typing</option>
+                <option value="Online Applications">Online Applications</option>
+                <option value="UIF / SARS / PSIRA">UIF / SARS / PSIRA</option>
+                <option value="Company Registration">Company Registration</option>
+                <option value="Other Café Service">Other Café Service</option>
+              </optgroup>
+              <optgroup label="IT Solutions">
+                <option value="Laptop Repair">Laptop Repair</option>
+                <option value="Phone Software Reset">Phone Software Reset</option>
+                <option value="System Troubleshooting">System Troubleshooting</option>
+              </optgroup>
+              <optgroup label="Photography">
+                <option value="Wedding Photography">Wedding Photography</option>
+                <option value="School Photography">School Photography</option>
+                <option value="Corporate Event Photography">Corporate Event Photography</option>
+                <option value="Short Video / Content Creation">Short Video / Content Creation</option>
+              </optgroup>
+              <optgroup label="Custom Products">
+                <option value="Custom T-Shirts">Custom T-Shirts</option>
+                <option value="Custom Mugs">Custom Mugs</option>
+                <option value="Custom Stickers">Custom Stickers</option>
+                <option value="Other Custom Product">Other Custom Product</option>
+              </optgroup>
+              <option value="Other / Not Listed">Other / Not Listed</option>
+            </select>
+          </div>
+
+          <!-- Budget & Timeline -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quoteBudget">Approximate Budget</label>
+              <select id="quoteBudget" name="budget" class="form-control">
+                <option value="" disabled selected>— Select budget range —</option>
+                <option value="Under R500">Under R500</option>
+                <option value="R500 – R2,000">R500 – R2,000</option>
+                <option value="R2,000 – R5,000">R2,000 – R5,000</option>
+                <option value="R5,000 – R10,000">R5,000 – R10,000</option>
+                <option value="R10,000 – R20,000">R10,000 – R20,000</option>
+                <option value="R20,000+">R20,000+</option>
+                <option value="Flexible / Not Sure">Flexible / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quoteDeadline">Preferred Deadline</label>
+              <input type="date" id="quoteDeadline" name="deadline" class="form-control" />
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="quoteDesc">Project Description <span style="color:var(--accent)">*</span></label>
+            <textarea id="quoteDesc" name="description" class="form-control" rows="5"
+              placeholder="Describe your project in detail. Include sizes, quantities, colours, style preferences, or any other relevant information..." required></textarea>
+          </div>
+
+          <!-- File Upload -->
+          <div class="form-group">
+            <label>Attach Files (optional)</label>
+            <label class="file-upload" for="quoteFile">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Drag &amp; drop files here, or click to browse</p>
+              <span>Accepted: PDF, PNG, JPG, AI, EPS — Max 10MB each</span>
+              <input type="file" id="quoteFile" name="files" multiple accept=".pdf,.png,.jpg,.jpeg,.ai,.eps,.svg" />
+            </label>
+          </div>
+
+          <!-- How did you hear -->
+          <div class="form-group">
+            <label for="quoteSource">How did you hear about us?</label>
+            <select id="quoteSource" name="source" class="form-control">
+              <option value="" disabled selected>— Select an option —</option>
+              <option value="Google Search">Google Search</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram">Instagram</option>
+              <option value="WhatsApp">WhatsApp</option>
+              <option value="Word of Mouth / Referral">Word of Mouth / Referral</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">
+            <i class="fas fa-paper-plane"></i> Submit Quote Request
+          </button>
+
+          <p style="font-size:0.78rem; color:var(--text-muted); text-align:center; margin-top:14px;">
+            <i class="fas fa-lock" style="color:var(--accent)"></i>
+            Your information is secure and will never be shared with third parties.
+          </p>
+        </form>
+
+        <!-- Success state (shown after submit) -->
+        <div class="success-state" id="quoteSuccess">
+          <i class="fas fa-check-circle"></i>
+          <h3>Quote Request Sent!</h3>
+          <p>Thank you! We've received your request and will send you a tailored quote within 24 hours. Keep an eye on your email or WhatsApp.</p>
+          <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+            <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+            <a href="https://wa.me/27611565699" class="btn btn-outline" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Message on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">DB</div>
+          <div class="logo-text"><span>Darriel Black</span><span>Cyber Cafe</span></div>
+        </a>
+        <p>Your one-stop digital and printing solution in South Africa.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/27611565699" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> About Us</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Services</a></li>
+          <li><a href="store.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Online Store</a></li>
+          <li><a href="portfolio.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Portfolio</a></li>
+          <li><a href="quote.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="services.html#printing"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Printing</a></li>
+          <li><a href="services.html#web"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Web Design</a></li>
+          <li><a href="services.html#graphic"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Graphic Design</a></li>
+          <li><a href="services.html#digital"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Digital Marketing</a></li>
+          <li><a href="services.html#cafe"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Internet Café</a></li>
+          <li><a href="services.html#photo"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Photography</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+27 61 156 5699</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>darrielblackcybercafe@gmail.com</span></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>South Africa</span></div>
+        <a href="https://wa.me/27611565699" class="btn btn-outline btn-sm mt-16" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span class="current-year"></span> <a href="index.html">Darriel Black Cyber Cafe</a>. All rights reserved.</p>
+      <p>Designed with <i class="fas fa-heart" style="color:var(--accent)"></i> in South Africa</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/27611565699" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="js/main.js"></script>
+<script>
+  function selectService(value) {
+    const sel = document.getElementById('quoteService');
+    for (let i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value === value || sel.options[i].text.includes(value.split('(')[0].trim())) {
+        sel.selectedIndex = i;
+        sel.style.color = 'var(--white)';
+        break;
+      }
+    }
+    // Scroll to form
+    document.getElementById('quoteForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // Improve quote form submit to show success
+  const quoteForm = document.getElementById('quoteForm');
+  const quoteSuccess = document.getElementById('quoteSuccess');
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      btn.disabled = true;
+      setTimeout(() => {
+        quoteForm.style.display = 'none';
+        quoteSuccess.style.display = 'block';
+      }, 1800);
+    });
+  }
+
+  // Step indicator highlight on focus
+  const steps = document.querySelectorAll('.step-ind');
+  const nameInput = document.getElementById('quoteName');
+  const serviceInput = document.getElementById('quoteService');
+  const descInput = document.getElementById('quoteDesc');
+
+  function activateStep(n) {
+    steps.forEach((s, i) => {
+      s.classList.remove('active', 'done');
+      if (i < n) s.classList.add('done');
+      if (i === n) s.classList.add('active');
+    });
+  }
+
+  if (nameInput) nameInput.addEventListener('focus', () => activateStep(0));
+  if (serviceInput) serviceInput.addEventListener('focus', () => activateStep(1));
+  if (descInput) descInput.addEventListener('focus', () => activateStep(2));
+</script>
+</body>
+</html>

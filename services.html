@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Darriel Black Cyber Cafe Services – Printing, Web Design, Graphic Design, Digital Marketing, Internet Café, IT Solutions, Photography." />
+  <title>Services | Darriel Black Cyber Cafe</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    .price-note {
+      background: rgba(212,175,55,0.07);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+      font-size: 0.88rem;
+      color: var(--accent);
+    }
+    .price-note i { font-size: 1.1rem; flex-shrink: 0; }
+
+    .vinyl-sub {
+      margin-top: 16px;
+      padding-left: 20px;
+      border-left: 2px solid var(--accent);
+    }
+    .vinyl-sub .service-tag { background: rgba(212,175,55,0.05); }
+
+    .section-nav {
+      position: sticky;
+      top: var(--nav-height);
+      z-index: 500;
+      background: rgba(10,10,10,0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+    }
+    .section-nav-inner {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .section-nav-inner::-webkit-scrollbar { display: none; }
+    .section-nav-inner a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 14px 20px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      transition: all var(--transition);
+      border-bottom: 2px solid transparent;
+      font-weight: 500;
+    }
+    .section-nav-inner a:hover,
+    .section-nav-inner a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">DB</div>
+      <div class="logo-text"><span>Darriel Black</span><span>Cyber Cafe</span></div>
+    </a>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+      <li class="nav-item">
+        <a href="services.html" class="nav-link active">Services <i class="fas fa-chevron-down" style="font-size:0.6rem"></i></a>
+        <div class="dropdown">
+          <a href="#printing"><i class="fas fa-print"></i> Printing Services</a>
+          <a href="#web"><i class="fas fa-globe"></i> Web Designing</a>
+          <a href="#graphic"><i class="fas fa-palette"></i> Graphic Design</a>
+          <a href="#digital"><i class="fas fa-bullhorn"></i> Digital Marketing</a>
+          <a href="#cafe"><i class="fas fa-desktop"></i> Internet Café</a>
+          <a href="#it"><i class="fas fa-tools"></i> IT Solutions</a>
+          <a href="#photo"><i class="fas fa-camera"></i> Photography</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="store.html" class="nav-link">Online Store</a></li>
+      <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      <li class="nav-item"><a href="quote.html" class="nav-link nav-cta">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Services</span>
+    </div>
+    <h1>Our <span class="text-accent">Services</span></h1>
+    <p>Professional solutions across printing, design, tech, and more — all under one roof.</p>
+    <a href="quote.html" class="btn btn-primary"><i class="fas fa-file-alt"></i> Request a Quote</a>
+  </div>
+</section>
+
+<!-- STICKY SERVICE NAV -->
+<div class="section-nav">
+  <div class="container">
+    <div class="section-nav-inner">
+      <a href="#printing"><i class="fas fa-print"></i> Printing</a>
+      <a href="#web"><i class="fas fa-globe"></i> Web Design</a>
+      <a href="#graphic"><i class="fas fa-palette"></i> Graphic Design</a>
+      <a href="#digital"><i class="fas fa-bullhorn"></i> Digital Marketing</a>
+      <a href="#cafe"><i class="fas fa-desktop"></i> Internet Café</a>
+      <a href="#it"><i class="fas fa-tools"></i> IT Solutions</a>
+      <a href="#photo"><i class="fas fa-camera"></i> Photography</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SERVICES CONTENT ==================== -->
+<section class="section" id="services-main">
+  <div class="container">
+
+    <!-- ---- 1. PRINTING SERVICES ---- -->
+    <div class="service-category reveal" id="printing">
+      <div class="service-category-header">
+        <div class="cat-num">1</div>
+        <div>
+          <h3>Printing Services</h3>
+          <p>High-quality printing solutions for every business and personal need.</p>
+        </div>
+      </div>
+
+      <div class="service-list">
+        <div class="service-tag"><i class="fas fa-tshirt"></i> Sublimation Printing</div>
+        <div class="service-tag"><i class="fas fa-cut"></i> Vinyl Cutout</div>
+        <div class="service-tag"><i class="fas fa-sewing-needle"></i> Embroidery</div>
+        <div class="service-tag"><i class="fas fa-print"></i> Laser Printing</div>
+        <div class="service-tag"><i class="fas fa-layer-group"></i> DTF Printing</div>
+      </div>
+
+      <div style="margin-top: 24px;">
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 12px;"><strong style="color:var(--accent)">Vinyl Cutout includes:</strong></p>
+        <div class="vinyl-sub">
+          <div class="service-list">
+            <div class="service-tag"><i class="fas fa-car"></i> Car Branding</div>
+            <div class="service-tag"><i class="fas fa-sign"></i> Welcome Boards</div>
+            <div class="service-tag"><i class="fas fa-flag"></i> Banners</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="price-note">
+        <i class="fas fa-info-circle"></i>
+        <span>Prices available on request — <strong>Quotation required</strong>. <a href="quote.html" style="color:var(--accent); font-weight:600;">Get your quote here →</a></span>
+      </div>
+    </div>
+
+    <!-- ---- 2. WEB DESIGNING ---- -->
+    <div class="service-category reveal" id="web">
+      <div class="service-category-header">
+        <div class="cat-num">2</div>
+        <div>
+          <h3>Web Designing</h3>
+          <p>Beautiful, responsive websites that convert visitors into clients.</p>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Basic -->
+        <div class="pricing-card">
+          <p class="plan-name">Basic Package</p>
+          <div class="price">R4,500 <span></span></div>
+          <p class="plan-desc">Perfect for startups and individuals who need a clean, professional online presence.</p>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check-circle"></i> 3 Pages</li>
+            <li><i class="fas fa-check-circle"></i> Custom Design</li>
+            <li><i class="fas fa-check-circle"></i> Mobile-Friendly (Responsive)</li>
+            <li><i class="fas fa-check-circle"></i> 1 Email Address</li>
+            <li><i class="fas fa-check-circle"></i> Social Media Integration</li>
+            <li><i class="fas fa-check-circle"></i> 1–2 Revisions</li>
+          </ul>
+          <a href="quote.html" class="btn btn-outline" style="width:100%; justify-content:center;">Get Started</a>
+        </div>
+
+        <!-- Professional -->
+        <div class="pricing-card featured">
+          <span class="badge-featured">Most Popular</span>
+          <p class="plan-name">Professional</p>
+          <div class="price">R10,000 <span></span></div>
+          <p class="plan-desc">Ideal for growing businesses that need a powerful, optimized web presence.</p>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check-circle"></i> Up to 6 Pages</li>
+            <li><i class="fas fa-check-circle"></i> Advanced UI/UX Design</li>
+            <li><i class="fas fa-check-circle"></i> SEO Optimization</li>
+            <li><i class="fas fa-check-circle"></i> Multiple Email Addresses</li>
+            <li><i class="fas fa-check-circle"></i> Speed Optimization</li>
+            <li><i class="fas fa-check-circle"></i> 3–5 Revisions</li>
+          </ul>
+          <a href="quote.html" class="btn btn-primary" style="width:100%; justify-content:center;">Get Started</a>
+        </div>
+
+        <!-- E-commerce -->
+        <div class="pricing-card">
+          <p class="plan-name">E-commerce</p>
+          <div class="price">R18,000 <span></span></div>
+          <p class="plan-desc">Full-featured online store with payment integration and admin dashboard.</p>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check-circle"></i> Online Store Functionality</li>
+            <li><i class="fas fa-check-circle"></i> Payment Integration</li>
+            <li><i class="fas fa-check-circle"></i> Product Management System</li>
+            <li><i class="fas fa-check-circle"></i> Admin Dashboard</li>
+            <li><i class="fas fa-check-circle"></i> Full SEO Setup</li>
+            <li><i class="fas fa-check-circle"></i> Unlimited Products</li>
+          </ul>
+          <a href="quote.html" class="btn btn-outline" style="width:100%; justify-content:center;">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---- 3. GRAPHIC DESIGN ---- -->
+    <div class="service-category reveal" id="graphic">
+      <div class="service-category-header">
+        <div class="cat-num">3</div>
+        <div>
+          <h3>Graphic Design</h3>
+          <p>Eye-catching designs that communicate your brand powerfully.</p>
+        </div>
+      </div>
+
+      <div class="service-list">
+        <div class="service-tag"><i class="fas fa-file-image"></i> Flyers</div>
+        <div class="service-tag"><i class="fas fa-trademark"></i> Logos</div>
+        <div class="service-tag"><i class="fas fa-image"></i> Posters</div>
+        <div class="service-tag"><i class="fas fa-id-card"></i> Business Cards</div>
+        <div class="service-tag"><i class="fas fa-cubes"></i> Branding Kits</div>
+        <div class="service-tag"><i class="fas fa-tshirt"></i> T-shirt Designs</div>
+        <div class="service-tag"><i class="fas fa-ellipsis-h"></i> And More...</div>
+      </div>
+      <div class="price-note">
+        <i class="fas fa-info-circle"></i>
+        <span>Prices vary by project — <strong>Contact us or <a href="quote.html" style="color:var(--accent); font-weight:600;">request a quote</a></strong> for a tailored price.</span>
+      </div>
+    </div>
+
+    <!-- ---- 4. DIGITAL MARKETING ---- -->
+    <div class="service-category reveal" id="digital">
+      <div class="service-category-header">
+        <div class="cat-num">4</div>
+        <div>
+          <h3>Digital Marketing</h3>
+          <p>Grow your brand online with strategic marketing solutions.</p>
+        </div>
+      </div>
+
+      <div class="service-list">
+        <div class="service-tag"><i class="fab fa-facebook"></i> Social Media Management</div>
+        <div class="service-tag"><i class="fas fa-photo-video"></i> Content Creation</div>
+        <div class="service-tag"><i class="fas fa-ad"></i> Ads Management</div>
+        <div class="service-tag"><i class="fas fa-chart-line"></i> Branding Strategy</div>
+      </div>
+      <div class="price-note">
+        <i class="fas fa-info-circle"></i>
+        <span>Pricing on request — <a href="quote.html" style="color:var(--accent); font-weight:600;">Request a quote →</a></span>
+      </div>
+    </div>
+
+    <!-- ---- 5. INTERNET CAFÉ ---- -->
+    <div class="service-category reveal" id="cafe">
+      <div class="service-category-header">
+        <div class="cat-num">5</div>
+        <div>
+          <h3>Internet Café Services</h3>
+          <p>Comprehensive admin and document services for everyday needs.</p>
+        </div>
+      </div>
+
+      <div class="service-list">
+        <div class="service-tag"><i class="fas fa-file-alt"></i> CV / Résumé Typing</div>
+        <div class="service-tag"><i class="fas fa-book"></i> Assignment Typing</div>
+        <div class="service-tag"><i class="fas fa-edit"></i> Document Editing</div>
+        <div class="service-tag"><i class="fas fa-envelope-open-text"></i> Letters &amp; Company Profiles</div>
+        <div class="service-tag"><i class="fas fa-print"></i> Printing &amp; Photocopying</div>
+        <div class="service-tag"><i class="fas fa-layer-group"></i> Laminating &amp; Binding</div>
+        <div class="service-tag"><i class="fas fa-graduation-cap"></i> Online Applications (School/Jobs)</div>
+        <div class="service-tag"><i class="fas fa-briefcase"></i> UIF Claims</div>
+        <div class="service-tag"><i class="fas fa-receipt"></i> SARS Applications</div>
+        <div class="service-tag"><i class="fas fa-id-badge"></i> PSIRA Renewals</div>
+        <div class="service-tag"><i class="fas fa-id-card"></i> ID Booking</div>
+        <div class="service-tag"><i class="fas fa-building"></i> Company Registration</div>
+        <div class="service-tag"><i class="fab fa-windows"></i> Windows &amp; Office Installation</div>
+        <div class="service-tag"><i class="fas fa-camera"></i> ID Photos</div>
+        <div class="service-tag"><i class="fas fa-search"></i> Job Hunting Assistance</div>
+      </div>
+    </div>
+
+    <!-- ---- 6. IT SOLUTIONS ---- -->
+    <div class="service-category reveal" id="it">
+      <div class="service-category-header">
+        <div class="cat-num">6</div>
+        <div>
+          <h3>IT Solutions</h3>
+          <p>Expert tech support to keep your devices running smoothly.</p>
+        </div>
+      </div>
+
+      <div class="service-list">
+        <div class="service-tag"><i class="fas fa-laptop-medical"></i> Laptop Repairs</div>
+        <div class="service-tag"><i class="fas fa-mobile-alt"></i> Phone Software Reset</div>
+        <div class="service-tag"><i class="fas fa-tools"></i> System Troubleshooting</div>
+      </div>
+      <div class="price-note">
+        <i class="fas fa-info-circle"></i>
+        <span>Prices available on request — <a href="contact.html" style="color:var(--accent); font-weight:600;">Contact us</a> or <a href="quote.html" style="color:var(--accent); font-weight:600;">request a quote</a>.</span>
+      </div>
+    </div>
+
+    <!-- ---- 7. PHOTOGRAPHY ---- -->
+    <div class="service-category reveal" id="photo">
+      <div class="service-category-header">
+        <div class="cat-num">7</div>
+        <div>
+          <h3>Photography</h3>
+          <p>Capturing your important moments with a professional eye.</p>
+        </div>
+      </div>
+
+      <div class="service-list">
+        <div class="service-tag"><i class="fas fa-ring"></i> Weddings</div>
+        <div class="service-tag"><i class="fas fa-school"></i> School Photography</div>
+        <div class="service-tag"><i class="fas fa-building"></i> Corporate Events</div>
+        <div class="service-tag"><i class="fas fa-film"></i> Short Videos</div>
+        <div class="service-tag"><i class="fas fa-photo-video"></i> Content Creation</div>
+      </div>
+      <div class="price-note">
+        <i class="fas fa-info-circle"></i>
+        <span>Prices on request — <a href="quote.html" style="color:var(--accent); font-weight:600;">Request a Quote →</a></span>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center reveal" style="padding-top: 20px;">
+      <p style="font-size:1.05rem; margin-bottom:24px;">Don't see exactly what you need? <strong style="color:var(--accent)">We'll make it happen.</strong></p>
+      <a href="quote.html" class="btn btn-primary btn-lg"><i class="fas fa-file-alt"></i> Request a Custom Quote</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">DB</div>
+          <div class="logo-text"><span>Darriel Black</span><span>Cyber Cafe</span></div>
+        </a>
+        <p>Your one-stop digital and printing solution in South Africa.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/27611565699" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> About Us</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Services</a></li>
+          <li><a href="store.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Online Store</a></li>
+          <li><a href="portfolio.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Portfolio</a></li>
+          <li><a href="quote.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#printing"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Printing</a></li>
+          <li><a href="#web"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Web Design</a></li>
+          <li><a href="#graphic"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Graphic Design</a></li>
+          <li><a href="#digital"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Digital Marketing</a></li>
+          <li><a href="#cafe"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Internet Café</a></li>
+          <li><a href="#it"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> IT Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+27 61 156 5699</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>darrielblackcybercafe@gmail.com</span></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>South Africa</span></div>
+        <a href="https://wa.me/27611565699" class="btn btn-outline btn-sm mt-16" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span class="current-year"></span> <a href="index.html">Darriel Black Cyber Cafe</a>. All rights reserved.</p>
+      <p>Designed with <i class="fas fa-heart" style="color:var(--accent)"></i> in South Africa</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/27611565699" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="js/main.js"></script>
+<script>
+  // Highlight sticky nav on scroll
+  const sectionAnchors = ['printing','web','graphic','digital','cafe','it','photo'];
+  const navLinks = document.querySelectorAll('.section-nav-inner a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sectionAnchors.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 160) current = id;
+    });
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Darriel Black Cyber Cafe – Our story, mission, vision and why South Africa trusts us for digital and printing services." />
+  <title>About Us | Darriel Black Cyber Cafe</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    .mission-vision {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .mv-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .mv-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--accent);
+    }
+    .mv-card .mv-icon {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .mv-card h3 { color: var(--white); margin-bottom: 12px; }
+    .mv-card p { font-size: 0.92rem; }
+
+    .team-note {
+      background: rgba(212,175,55,0.07);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+    }
+    .team-note i { font-size: 2.2rem; color: var(--accent); margin-bottom: 14px; display: block; }
+    .team-note h3 { color: var(--white); margin-bottom: 10px; }
+
+    @media (max-width: 768px) {
+      .mission-vision { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">DB</div>
+      <div class="logo-text">
+        <span>Darriel Black</span>
+        <span>Cyber Cafe</span>
+      </div>
+    </a>
+    <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
+      <li class="nav-item">
+        <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down" style="font-size:0.6rem"></i></a>
+        <div class="dropdown">
+          <a href="services.html#printing"><i class="fas fa-print"></i> Printing Services</a>
+          <a href="services.html#web"><i class="fas fa-globe"></i> Web Designing</a>
+          <a href="services.html#graphic"><i class="fas fa-palette"></i> Graphic Design</a>
+          <a href="services.html#digital"><i class="fas fa-bullhorn"></i> Digital Marketing</a>
+          <a href="services.html#cafe"><i class="fas fa-desktop"></i> Internet Café</a>
+          <a href="services.html#it"><i class="fas fa-tools"></i> IT Solutions</a>
+          <a href="services.html#photo"><i class="fas fa-camera"></i> Photography</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="store.html" class="nav-link">Online Store</a></li>
+      <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      <li class="nav-item"><a href="quote.html" class="nav-link nav-cta">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>About Us</span>
+    </div>
+    <h1>About <span class="text-accent">Us</span></h1>
+    <p>The story behind South Africa's go-to digital and printing hub.</p>
+  </div>
+</section>
+
+<!-- ABOUT INTRO -->
+<section class="section" aria-label="Company introduction">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-img-box">
+          <img src="images/Logo/About Us.jpg" alt="Darriel Black Cyber Cafe printing and workspace" loading="lazy" />
+        </div>
+        <div class="about-badge">
+          <span class="num" data-target="500" data-suffix="+">500+</span>
+          <span class="txt">Happy Clients</span>
+        </div>
+      </div>
+
+      <div class="about-text reveal">
+        <p class="subtitle">Our Story</p>
+        <h2>We Are <span class="text-accent">Darriel Black</span> Cyber Cafe</h2>
+        <p>Darriel Black Cyber Cafe was founded with a single purpose: to make professional digital and printing services accessible to everyone in South Africa. We started small — a dedicated team with big dreams and an even bigger commitment to quality.</p>
+        <p>Today, we are a full-service digital hub offering everything from custom printing and professional web design, to IT support, photography, and online government services. We serve individuals, students, entrepreneurs, and established businesses alike.</p>
+        <p>Our approach is simple: <strong style="color:var(--accent)">listen, create, and deliver</strong> results that exceed expectations every time.</p>
+
+        <div class="value-list">
+          <div class="value-item">
+            <div class="vi"><i class="fas fa-medal"></i></div>
+            <div>
+              <h4>Quality First</h4>
+              <p>We never compromise on quality — from the smallest business card to a full website launch.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="vi"><i class="fas fa-handshake"></i></div>
+            <div>
+              <h4>Client-Centred</h4>
+              <p>Every project is tailored to your specific needs and vision.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="vi"><i class="fas fa-bolt"></i></div>
+            <div>
+              <h4>Fast Turnaround</h4>
+              <p>We value your time and work efficiently to meet your deadlines.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="quote.html" class="btn btn-primary">Get a Free Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="section section-alt" aria-label="Mission and Vision">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Our Mission &amp; <span class="text-accent">Vision</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="mission-vision reveal">
+      <div class="mv-card">
+        <i class="fas fa-bullseye mv-icon"></i>
+        <h3>Our Mission</h3>
+        <p>To provide affordable, high-quality digital, printing, and IT services that empower individuals and businesses across South Africa to achieve their goals — professionally and confidently.</p>
+      </div>
+      <div class="mv-card">
+        <i class="fas fa-eye mv-icon"></i>
+        <h3>Our Vision</h3>
+        <p>To become the leading all-in-one digital service provider in South Africa, known for excellence, innovation, and a genuine commitment to community development.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section" aria-label="Why choose us">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Why Choose <span class="text-accent">Darriel Black</span>?</h2>
+      <div class="divider"></div>
+      <p>We stand apart because we combine professional expertise with genuine care for every client.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <i class="fas fa-award"></i>
+        <h4>Experienced Team</h4>
+        <p>Years of hands-on experience across all service areas.</p>
+      </div>
+      <div class="why-item reveal">
+        <i class="fas fa-tags"></i>
+        <h4>Affordable Pricing</h4>
+        <p>Premium services at prices that won't break the bank.</p>
+      </div>
+      <div class="why-item reveal">
+        <i class="fas fa-headset"></i>
+        <h4>Dedicated Support</h4>
+        <p>We're always available via WhatsApp, email, or phone.</p>
+      </div>
+      <div class="why-item reveal">
+        <i class="fas fa-layer-group"></i>
+        <h4>All-In-One Hub</h4>
+        <p>Everything you need under one roof — no need to go elsewhere.</p>
+      </div>
+      <div class="why-item reveal">
+        <i class="fas fa-star"></i>
+        <h4>Proven Results</h4>
+        <p>Hundreds of satisfied clients across South Africa.</p>
+      </div>
+      <div class="why-item reveal">
+        <i class="fas fa-clock"></i>
+        <h4>On-Time Delivery</h4>
+        <p>We respect your deadlines and deliver when promised.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding: 80px 0; background: var(--card-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container text-center reveal">
+    <h2>Ready to Work <span class="text-accent">Together?</span></h2>
+    <p style="max-width:500px; margin: 14px auto 32px;">Let's create something amazing for your business. Reach out today — we'd love to hear from you.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-envelope"></i> Contact Us</a>
+      <a href="quote.html" class="btn btn-outline btn-lg"><i class="fas fa-file-alt"></i> Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">DB</div>
+          <div class="logo-text"><span>Darriel Black</span><span>Cyber Cafe</span></div>
+        </a>
+        <p>Your one-stop digital and printing solution in South Africa.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/27611565699" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> About Us</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Services</a></li>
+          <li><a href="store.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Online Store</a></li>
+          <li><a href="portfolio.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Portfolio</a></li>
+          <li><a href="quote.html"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="services.html#printing"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Printing</a></li>
+          <li><a href="services.html#web"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Web Design</a></li>
+          <li><a href="services.html#graphic"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Graphic Design</a></li>
+          <li><a href="services.html#digital"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Digital Marketing</a></li>
+          <li><a href="services.html#cafe"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> Internet Café</a></li>
+          <li><a href="services.html#it"><i class="fas fa-chevron-right" style="font-size:0.65rem"></i> IT Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+27 61 156 5699</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>darrielblackcybercafe@gmail.com</span></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>South Africa</span></div>
+        <a href="https://wa.me/27611565699" class="btn btn-outline btn-sm mt-16" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span class="current-year"></span> <a href="index.html">Darriel Black Cyber Cafe</a>. All rights reserved.</p>
+      <p>Designed with <i class="fas fa-heart" style="color:var(--accent)"></i> in South Africa</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/27611565699" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
